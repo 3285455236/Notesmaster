@@ -13,7 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/**
+ * 负责人：艾伟龙（代码注释）
+ * 功能：便签列表主页面，展示所有便签数据
+ * 核心作用：展示所有便签数据，管理列表适配器
+ */
 package net.micode.notes.ui;
 
 import android.app.Activity;
@@ -100,7 +104,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     private BackgroundQueryHandler mBackgroundQueryHandler;
 
     private NotesListAdapter mNotesListAdapter;
-
+    // 便签列表控件对象
     private ListView mNotesListView;
 
     private Button mAddNewNote;
@@ -137,7 +141,11 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /**
+         * 页面初始化方法：加载布局、初始化数据
+         */
         super.onCreate(savedInstanceState);
+        // 加载列表页面布局
         setContentView(R.layout.note_list);
         initResources();
 

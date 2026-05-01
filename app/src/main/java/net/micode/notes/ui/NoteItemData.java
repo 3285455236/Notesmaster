@@ -25,7 +25,11 @@ import net.micode.notes.data.Notes;
 import net.micode.notes.data.Notes.NoteColumns;
 import net.micode.notes.tool.DataUtils;
 
-
+/**
+ * 负责人：艾伟龙（代码注释）
+ * 功能：便签数据实体类，存储单条便签的标题、内容、时间等信息
+ * 核心作用：封装便签的标题、内容、时间等核心数据
+ */
 public class NoteItemData {
     static final String [] PROJECTION = new String [] {
         NoteColumns.ID,

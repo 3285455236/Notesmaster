@@ -71,7 +71,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+/**
+ * 负责人：艾伟龙（代码注释）
+ * 功能：便签编辑/新增页面，支持创建、修改便签内容
+ * 核心作用：编辑已有便签、创建新便签并保存
+ */
 public class NoteEditActivity extends Activity implements OnClickListener,
         NoteSettingChangedListener, OnTextViewChangeListener {
     private class HeadViewHolder {
