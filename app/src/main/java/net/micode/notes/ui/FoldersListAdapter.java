@@ -28,7 +28,11 @@ import net.micode.notes.R;
 import net.micode.notes.data.Notes;
 import net.micode.notes.data.Notes.NoteColumns;
 
-
+/**
+ * 负责人：艾伟龙（代码注释）
+ * 功能：文件夹列表适配器，负责展示便签分类文件夹
+ * 核心作用：展示便签分类文件夹，绑定文件夹数据
+ */
 public class FoldersListAdapter extends CursorAdapter {
     public static final String [] PROJECTION = {
         NoteColumns.ID,
@@ -42,7 +46,9 @@ public class FoldersListAdapter extends CursorAdapter {
         super(context, c);
         // TODO Auto-generated constructor stub
     }
-
+    /**
+     * 渲染文件夹列表项
+     */
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         return new FolderListItem(context);

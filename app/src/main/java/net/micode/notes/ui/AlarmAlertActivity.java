@@ -39,13 +39,20 @@ import net.micode.notes.tool.DataUtils;
 
 import java.io.IOException;
 
-
+/**
+ * 负责人：艾伟龙（代码注释）
+ * 功能：便签闹钟提醒页面，触发便签提醒弹窗
+ * 核心作用：触发提醒时，展示便签提醒内容
+ */
 public class AlarmAlertActivity extends Activity implements OnClickListener, OnDismissListener {
     private long mNoteId;
     private String mSnippet;
     private static final int SNIPPET_PREW_MAX_LEN = 60;
     MediaPlayer mPlayer;
-
+    /**
+     * 页面初始化方法
+     * 作用：加载提醒布局，展示提醒信息
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

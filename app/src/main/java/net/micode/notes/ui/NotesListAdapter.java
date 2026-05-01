@@ -30,9 +30,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
-
+/**
+ * 负责人：艾伟龙（代码注释）
+ * 功能：便签列表适配器，负责将数据绑定到列表视图
+ * 核心作用：将便签数据绑定到ListView列表项中
+ */
 public class NotesListAdapter extends CursorAdapter {
     private static final String TAG = "NotesListAdapter";
+    // 上下文对象
     private Context mContext;
     private HashMap<Integer, Boolean> mSelectedIndex;
     private int mNotesCount;
@@ -42,14 +47,19 @@ public class NotesListAdapter extends CursorAdapter {
         public int widgetId;
         public int widgetType;
     };
-
+    /**
+     * 构造方法
+     * @param context 上下文
+     */
     public NotesListAdapter(Context context) {
         super(context, null);
         mSelectedIndex = new HashMap<Integer, Boolean>();
         mContext = context;
         mNotesCount = 0;
     }
-
+    /**
+     * 获取列表项视图
+     */
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         return new NotesListItem(context);
