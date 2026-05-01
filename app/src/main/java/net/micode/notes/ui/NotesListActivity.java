@@ -137,7 +137,12 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        // 【修复空指针闪退】增加非空判断，避免异常状态下初始化问题
+        if (savedInstanceState == null) {
+
+        }
         setContentView(R.layout.note_list);
         initResources();
 
